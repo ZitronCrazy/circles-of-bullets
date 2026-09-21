@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="CirclesOfBullets"
+config/name="tilemaptest"
+run/main_scene="uid://lj1xan0og2g1"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,7 +22,7 @@ window/stretch/aspect="expand"
 
 [dotnet]
 
-project/assembly_name="CirclesOfBullets"
+project/assembly_name="tilemaptest"
 
 [physics]
 
