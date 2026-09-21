@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dlddpvq8ajtrq"]
+
+[ext_resource type="Texture2D" uid="uid://dnq24423nqvmv" path="res://assets/enemies/slime/slime_death0.png" id="1_p2gj0"]
+[ext_resource type="Texture2D" uid="uid://bfb35cv12i7gn" path="res://assets/enemies/slime/slime0.png" id="2_n6pvg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sg4lu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p2gj0")
+}],
+"loop": 1,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n6pvg")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4djk1"]
+size = Vector2(20, 17)
+
+[node name="slime" type="CharacterBody2D" unique_id=1831252331]
+scale = Vector2(3, 3)
+collision_layer = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1328629355]
+sprite_frames = SubResource("SpriteFrames_sg4lu")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=448099660]
+position = Vector2(1, 4.5)
+shape = SubResource("RectangleShape2D_4djk1")
