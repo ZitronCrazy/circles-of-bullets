@@ -1,4 +1,11 @@
 extends CharacterBody2D
+## Player movement logic.
+##
+## Tutorial(Top Down Survival Shooter In Godot | Part 2 - Player Movement): https://youtu.be/oSX6x7LT4e0
+## Accessed on: 21.09.2026
+##
+## Explanation of 8 directional movement by kidscancode: https://kidscancode.org/godot_recipes/4.x/2d/8_direction/
+## Accessed on: 21.09.2026
 
 var speed : int
 var screen_size : Vector2

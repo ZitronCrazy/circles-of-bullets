@@ -1,4 +1,8 @@
 extends Node2D
+## Enemy Spawner Logic.
+##
+## Tutorial(Top Down Survival Shooter In Godot | Part 3 - Enemy Spawner): https://youtu.be/84_Rv79d4yw
+## Accessed on: 21.09.2026
 
 #path to main node
 @onready var main = get_node("/root/Main")
