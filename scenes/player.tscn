@@ -169,6 +169,8 @@ animations = [{
 size = Vector2(27, 48)
 
 [node name="Player" type="CharacterBody2D" unique_id=267700314]
+collision_layer = 2
+collision_mask = 17
 script = ExtResource("1_dqkch")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=609630382]
