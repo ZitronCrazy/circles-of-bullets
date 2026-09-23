@@ -18,3 +18,7 @@ func _on_body_entered(body: Node2D):
 	print(body.name)
 	if body.name == "World":
 		queue_free()
+	else:
+		if body.alive:
+			body.die()
+			queue_free()
