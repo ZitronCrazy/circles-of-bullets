@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://x8rh6qdksag3"]
+
+[ext_resource type="Texture2D" uid="uid://dn7typjxwh42a" path="res://assets/items/Heart-box.png" id="1_a2r0j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8cc8"]
+size = Vector2(32, 32)
+
+[node name="Item" type="Area2D" unique_id=1242918876]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=214964906]
+texture = ExtResource("1_a2r0j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1392577926]
+shape = SubResource("RectangleShape2D_d8cc8")
