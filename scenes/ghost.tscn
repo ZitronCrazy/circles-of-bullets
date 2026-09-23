@@ -30,7 +30,7 @@ size = Vector2(20, 22)
 size = Vector2(20, 22)
 
 [node name="ghost" type="CharacterBody2D" unique_id=1164443351]
-scale = Vector2(3, 3)
+scale = Vector2(1.7, 1.7)
 collision_layer = 4
 script = ExtResource("1_bbnym")
 
