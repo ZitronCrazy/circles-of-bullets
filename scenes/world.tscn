@@ -31,7 +31,7 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 14
 sources/1 = SubResource("TileSetAtlasSource_47enk")
 
-[node name="TileMap" type="TileMap" unique_id=1719586215]
+[node name="World" type="TileMap" unique_id=1719586215]
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_pe8qb")
 format = 2
