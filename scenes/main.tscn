@@ -3,15 +3,19 @@
 [ext_resource type="PackedScene" uid="uid://c422dy2syhgxs" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://dy1uq6y1t1lph" path="res://scenes/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://bsi16we083rk5" path="res://scenes/enemy_spawner.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://d0ybvqnneueqa" path="res://scenes/tile_map.tscn" id="4_jyhfs"]
 
 [node name="Main" type="Node" unique_id=1726041106]
 script = ExtResource("1_sugp2")
+
+[node name="TileMap" parent="." unique_id=1719586215 instance=ExtResource("4_jyhfs")]
 
 [node name="Player" parent="." unique_id=267700314 instance=ExtResource("1_o5qli")]
 
 [node name="EnemySpawner" parent="." unique_id=76893813 instance=ExtResource("2_0wfyh")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1106372268]
+visible = false
 position = Vector2(377, 370)
 zoom = Vector2(0.75, 0.75)
 
