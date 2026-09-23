@@ -1,34 +1,48 @@
 extends CharacterBody2D
-## Player movement logic.
+## Player control logic.
 ##
 ## Tutorial(Top Down Survival Shooter In Godot | Part 2 - Player Movement): https://youtu.be/oSX6x7LT4e0
 ## Accessed on: 15.09.2026
 ##
 ## Explanation of 8 directional movement by kidscancode: https://kidscancode.org/godot_recipes/4.x/2d/8_direction/
 ## Accessed on: 21.09.2026
+## 
+## Tutorial(Top Down Survival Shooter In Godot | Part 5 - Shooting): https://youtu.be/xalHXyDtfpc
+## Accessed on: 23.09.2026
+
+signal shoot
 
 var speed : int
+var can_shoot : bool
 var screen_size : Vector2
 
 func _ready():
 	screen_size = get_viewport_rect().size
 	position = screen_size / 2
 	speed = 200
+	can_shoot = true
 
 func get_input():
-	#keyboard input
+	# keyboard input
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	velocity = input_dir.normalized() * speed
+	
+	# mouse clicks
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and can_shoot:
+		var dir = get_global_mouse_position() - position
+		shoot.emit(position, dir)
+		can_shoot = false
+		$ShotTimer.start()
 
 func _physics_process(_delta):
-	#player movement
+	# player movement
 	get_input()
 	move_and_slide()
 	
-	#limit movement to window size
+	# limit movement to window size
 	position = position.clamp(Vector2.ZERO, screen_size)
 	
-	#player rotation
+	# player rotation
 	var mouse = get_local_mouse_position()
 	var angle = snappedf(mouse.angle(), PI/ 4) / (PI / 4)
 	angle = wrapi(int(angle), 0, 8)
@@ -41,3 +55,7 @@ func _physics_process(_delta):
 	else:
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.frame = 1
+
+
+func _on_shot_timer_timeout():
+	can_shoot = true

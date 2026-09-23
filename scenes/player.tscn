@@ -181,3 +181,7 @@ animation = &"walk7"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1153064979]
 position = Vector2(-1.5, 3)
 shape = SubResource("RectangleShape2D_4djk1")
+
+[node name="ShotTimer" type="Timer" parent="." unique_id=1032778135]
+
+[connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]
