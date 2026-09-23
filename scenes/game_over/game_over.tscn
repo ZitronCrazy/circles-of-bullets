@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://devvf2k6ishho"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sg4lu"]
+bg_color = Color(0.09411765, 0.1882353, 0.1882353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4djk1"]
+bg_color = Color(0.32156864, 0.49803922, 0.22352941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gdtv0"]
+bg_color = Color(0.1254902, 0.27450982, 0.19215687, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxsua"]
+bg_color = Color(0.68235296, 0.76862746, 0.2509804, 1)
+
+[node name="Game Over" type="CanvasLayer" unique_id=420417616]
+
+[node name="Panel" type="Panel" parent="." unique_id=321751918]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -100.0
+offset_right = 256.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sg4lu")
+
+[node name="GameOverLabel" type="Label" parent="." unique_id=1939304838]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = -91.0
+offset_right = 86.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
+theme_override_font_sizes/font_size = 30
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WavesSurvivedLabel" type="Label" parent="." unique_id=880549072]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -11.5
+offset_right = 76.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
+theme_override_font_sizes/font_size = 20
+text = "WAVES SURVIVED: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=90144880]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = 51.0
+offset_right = 75.0
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
+theme_override_colors/font_pressed_color = Color(0.52156866, 0.41568628, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9882353, 0.92941177, 0.75686276, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_4djk1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gdtv0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gxsua")
+text = "RETRY?"

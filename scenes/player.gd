@@ -9,6 +9,10 @@ extends CharacterBody2D
 ## 
 ## Tutorial(Top Down Survival Shooter In Godot | Part 5 - Shooting): https://youtu.be/xalHXyDtfpc
 ## Accessed on: 23.09.2026
+## 
+## Tutorial(Top Down Survival Shooter In Godot | Part 8 - Game Over): https://youtu.be/_-e7t5Fby_0
+## Accessed on: 23.09.2026
+
 
 signal shoot
 
@@ -18,6 +22,9 @@ var screen_size : Vector2
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	reset_control()
+
+func reset_control():
 	position = screen_size / 2
 	speed = 200
 	can_shoot = true
