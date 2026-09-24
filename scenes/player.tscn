@@ -201,4 +201,5 @@ stream = SubResource("AudioStreamMP3_ke2ow")
 volume_db = -1.0
 
 [connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]
+[connection signal="timeout" from="boostTimer" to="." method="_on_boost_timer_timeout"]
 [connection signal="timeout" from="fastfireTimer" to="." method="_on_fastfire_timer_timeout"]
