@@ -17,7 +17,7 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	#coffee
 	if item_type == 0:
-		print("coffee")
+		body.boost()
 	#health
 	elif item_type == 1:
 		print("Lives")

@@ -185,4 +185,8 @@ shape = SubResource("RectangleShape2D_4djk1")
 
 [node name="ShotTimer" type="Timer" parent="." unique_id=1032778135]
 
+[node name="boostTimer" type="Timer" parent="." unique_id=986338450]
+wait_time = 6.0
+one_shot = true
+
 [connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]
