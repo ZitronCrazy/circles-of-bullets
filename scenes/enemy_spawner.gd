@@ -28,7 +28,7 @@ func _ready() -> void:
 		if i is Marker2D:
 			spawn_points.append(i)
 
-func _on_timer_timeout() -> void:
+func _on_timer_timeout():
 	# check how many enemies have already been created
 	var enemies = get_tree().get_nodes_in_group("enemies")
 	if enemies.size() < get_parent().max_enemies:
@@ -37,6 +37,13 @@ func _on_timer_timeout() -> void:
 		# pick random enemy
 		var selected_scene = enemy_scenes[randi() % enemy_scenes.size()]
 		var enemy = selected_scene.instantiate()
+		# change enemies speed based on current main game state
+		if selected_scene == skeleton_scene:
+			enemy.speed = main.skeleton_speed
+		if selected_scene == slime_scene:
+			enemy.speed = main.slime_speed
+		if selected_scene == ghost_scene:
+			enemy.speed = main.ghost_speed
 		# spawn enemy
 		enemy.position = spawn.position
 		enemy.hit_player.connect(hit)

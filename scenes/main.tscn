@@ -22,6 +22,10 @@ bullet_scene = ExtResource("4_tbgi4")
 
 [node name="EnemySpawner" parent="." unique_id=76893813 instance=ExtResource("2_0wfyh")]
 
+[node name="WaveOVerTimer" type="Timer" parent="." unique_id=1175990406]
+process_mode = 2
+one_shot = true
+
 [node name="RestartTimer" type="Timer" parent="." unique_id=399422790]
 process_mode = 2
 one_shot = true
@@ -33,4 +37,5 @@ process_mode = 2
 
 [connection signal="shoot" from="Player" to="BulletManager" method="_on_player_shoot"]
 [connection signal="hit_p" from="EnemySpawner" to="." method="_on_enemy_spawner_hit_p"]
+[connection signal="timeout" from="WaveOVerTimer" to="." method="_on_wave_o_ver_timer_timeout"]
 [connection signal="timeout" from="RestartTimer" to="." method="_on_restart_timer_timeout"]

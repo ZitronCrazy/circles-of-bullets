@@ -16,7 +16,7 @@ signal hit_player
 
 var alive : bool
 var entered : bool
-var speed : int = 50
+var speed : float = 50.0
 var direction : Vector2
 const DROP_CHANCE : float = 0.1
 
