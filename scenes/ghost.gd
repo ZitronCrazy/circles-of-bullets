@@ -17,6 +17,7 @@ var alive : bool
 var entered : bool
 var speed : int = 100
 var direction : Vector2
+const DROP_CHANCE : float = 0.1
 
 func _ready():
 	var screen_rect = get_viewport_rect()
@@ -51,7 +52,8 @@ func die():
 	alive = false
 	$AnimatedSprite2D.animation = "dead"
 	$Area2D/CollisionShape2D.set_deferred("disabled", true)
-	drop_item()
+	if randf() <= DROP_CHANCE:
+		drop_item()
 	
 func drop_item():
 	var item = item_scene.instantiate()
