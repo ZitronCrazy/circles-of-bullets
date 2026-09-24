@@ -16,6 +16,8 @@ var wave : int
 var difficulty : float
 const DIFF_MULTIPLIER : float = 1.2
 var max_enemies : int
+var remaining_enemies : int
+var bodycount : int = 0
 var skeleton_speed : float
 var slime_speed : float
 var ghost_speed : float
@@ -35,17 +37,18 @@ func new_game():
 	slime_speed = 70.0
 	ghost_speed = 100.0
 	$EnemySpawner/Timer.wait_time = 1.0
+	$"Game Over/BodycountLabel".text = "BODYCOUNT: 0"
 	reset()
 
 func reset():
 	max_enemies = int(difficulty)
+	remaining_enemies = max_enemies
 	$Player.reset_control()
 	get_tree().call_group("enemies", "queue_free")
 	get_tree().call_group("bullets", "queue_free")
-	#get_tree().call_group("items", "queue_free") Wenn Items drin sind, diesen Code entfreien und Kommentar löschen.
 	$hud/liveslabel.text = "X" + str(lives)
 	$hud/wavelabel.text = "WAVE: " + str(wave)
-	$hud/enemieslabel.text = "X" + str(max_enemies)
+	$hud/enemieslabel.text = "X" + str(remaining_enemies)
 	$"Game Over".hide()
 	get_tree().paused = true
 	$RestartTimer.start()
@@ -68,6 +71,12 @@ func _process(_delta):
 		get_tree().paused = true
 		$WaveOVerTimer.start()
 
+func _on_enemy_killed():
+	bodycount += 1
+	remaining_enemies -= 1
+	
+	$hud/enemieslabel.text = "X" + str(remaining_enemies)
+
 func _on_enemy_spawner_hit_p():
 	print("hit player")
 	lives -= 1 
@@ -75,6 +84,7 @@ func _on_enemy_spawner_hit_p():
 	get_tree().paused = true
 	if lives <= 0:
 		$"Game Over/WavesSurvivedLabel".text = "WAVES SURVIVED: " + str(wave -1)
+		$"Game Over/BodycountLabel".text = "BODYCOUNT: " + str(bodycount)
 		$"Game Over".show()
 	else:
 		$WaveOVerTimer.start()
@@ -86,8 +96,8 @@ func _on_restart_timer_timeout():
 	get_tree().paused = false
 
 func is_wave_completed():
-	var all_dead = true
 	var enemies = get_tree().get_nodes_in_group("enemies")
+	var all_dead = true
 	# check if all enemies have spawned first
 	if enemies.size() == max_enemies:
 		for i in enemies:
