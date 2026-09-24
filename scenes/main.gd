@@ -10,6 +10,7 @@ extends Node
 ## Tutorial(Top Down Survival Shooter In Godot | Part 9 - Completed Waves):https://youtu.be/_1bVJSglte8
 ## Accessed on: 24.09.2026
 
+@onready var sfxgameover = $sfxgameover
 @onready var sfxyay = $sfxyay
 
 var wave : int 
@@ -26,6 +27,7 @@ var lives : int
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sfxyay.process_mode = Node.PROCESS_MODE_ALWAYS
+	sfxgameover.process_mode = Node.PROCESS_MODE_ALWAYS
 	new_game()
 	$"Game Over/Button".pressed.connect(new_game)
 
@@ -84,6 +86,7 @@ func _on_enemy_spawner_hit_p():
 	$hud/liveslabel.text = "X" + str(lives)
 	get_tree().paused = true
 	if lives <= 0:
+		sfxgameover.play()
 		$"Game Over/WavesSurvivedLabel".text = "WAVES SURVIVED: " + str(wave -1)
 		$"Game Over/BodycountLabel".text = "BODYCOUNT: " + str(bodycount)
 		$"Game Over".show()
