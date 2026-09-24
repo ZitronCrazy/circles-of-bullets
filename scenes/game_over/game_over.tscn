@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://devvf2k6ishho"]
 
+[ext_resource type="AudioStream" uid="uid://bx5voepibi4ny" path="res://assets/sfx/game-over-end-pixel-b-side.mp3" id="1_3j056"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sg4lu"]
 bg_color = Color(0.09411765, 0.1882353, 0.1882353, 1)
 border_width_left = 2
@@ -92,3 +94,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4djk1")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gdtv0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gxsua")
 text = "RETRY?"
+
+[node name="sfxgameover" type="AudioStreamPlayer2D" parent="." unique_id=797244979]
+stream = ExtResource("1_3j056")
+volume_db = -8.0
