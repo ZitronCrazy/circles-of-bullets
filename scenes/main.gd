@@ -39,6 +39,7 @@ func new_game():
 	$EnemySpawner/Timer.wait_time = 1.0
 	$"Game Over/BodycountLabel".text = "BODYCOUNT: 0"
 	reset()
+	get_tree().call_group("items", "queue_free")
 
 func reset():
 	max_enemies = int(difficulty)
