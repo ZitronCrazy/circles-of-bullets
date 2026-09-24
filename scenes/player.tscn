@@ -189,4 +189,9 @@ shape = SubResource("RectangleShape2D_4djk1")
 wait_time = 6.0
 one_shot = true
 
+[node name="fastfireTimer" type="Timer" parent="." unique_id=1066502968]
+wait_time = 4.0
+one_shot = true
+
 [connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]
+[connection signal="timeout" from="fastfireTimer" to="." method="_on_fastfire_timer_timeout"]

@@ -18,6 +18,8 @@ signal shoot
 
 const START_SPEED : int = 200
 const BOOST_SPEED : int = 400
+const NORMAL_SHOT : float = 0.5
+const FAST_SHOT : float = 0.1
 var speed : int
 var can_shoot : bool
 var screen_size : Vector2
@@ -27,9 +29,11 @@ func _ready():
 	reset_control()
 
 func reset_control():
+	can_shoot = true
 	position = screen_size / 2
 	speed = START_SPEED
-	can_shoot = true
+	$ShotTimer.wait_time = NORMAL_SHOT
+	
 
 func get_input():
 	# keyboard input
@@ -68,6 +72,11 @@ func _physics_process(_delta):
 func boost():
 	$boostTimer.start()
 	speed = BOOST_SPEED
+	
+func quick_fire():
+	$fastfireTimer.start()
+	$ShotTimer.wait_time = FAST_SHOT
+
 
 
 func _on_shot_timer_timeout():
@@ -75,3 +84,7 @@ func _on_shot_timer_timeout():
 	
 func _on_boost_timer_timeout() -> void:
 	speed = START_SPEED
+
+
+func _on_fastfire_timer_timeout() -> void:
+	$ShotTimer.wait_time = NORMAL_SHOT

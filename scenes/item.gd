@@ -1,5 +1,8 @@
 extends Area2D
 
+@onready var main = get_node("/root/Main")
+@onready var lives_label = get_node("/root/Main/hud/liveslabel")
+
 var item_type : int # 0: coffe, 1: health, 2: gun
 
 var coffe_box = preload("res://assets/items/coffee_box.png")
@@ -20,9 +23,10 @@ func _on_body_entered(body: Node2D) -> void:
 		body.boost()
 	#health
 	elif item_type == 1:
-		print("Lives")
+		main.lives +=1
+		lives_label.text = "X " +str(main.lives)
 	#gun
 	elif item_type == 2:
-		print("Gun")
+		body.quick_fire()
 	#delete item
 	queue_free()
