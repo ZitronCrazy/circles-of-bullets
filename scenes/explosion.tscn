@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d2wk3c84af26f"]
+
+[ext_resource type="Texture2D" uid="uid://cr0j141jrc4fy" path="res://assets/particles/blood0.png" id="1_nfeox"]
+[ext_resource type="Script" uid="uid://dx2ahxdw8sk5s" path="res://scenes/explosion.gd" id="1_q7epf"]
+
+[sub_resource type="Curve" id="Curve_7rj46"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Explosion" type="CPUParticles2D" unique_id=1225905193]
+emitting = false
+amount = 20
+texture = ExtResource("1_nfeox")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 5.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 90.0
+initial_velocity_max = 110.0
+scale_amount_min = 13.0
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_7rj46")
+color = Color(0.9647059, 0, 0, 1)
+script = ExtResource("1_q7epf")

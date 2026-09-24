@@ -9,6 +9,7 @@ extends CharacterBody2D
 @onready var main = get_node("/root/Main")
 @onready var player = get_node("/root/Main/Player")
 
+var explosion_scene := preload("res://scenes/explosion.tscn")
 var item_scene := preload("res://scenes/item.tscn")
 
 signal hit_player
@@ -54,6 +55,10 @@ func die():
 	$Area2D/CollisionShape2D.set_deferred("disabled", true)
 	if randf() <= DROP_CHANCE:
 		drop_item()
+	var explosion = explosion_scene.instantiate()
+	explosion.position=position
+	main.add_child(explosion)
+	explosion.process_mode = Node.PROCESS_MODE_ALWAYS #continoues explosion even if game over
 	
 func drop_item():
 	var item = item_scene.instantiate()
