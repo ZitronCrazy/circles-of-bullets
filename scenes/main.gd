@@ -10,6 +10,8 @@ extends Node
 ## Tutorial(Top Down Survival Shooter In Godot | Part 9 - Completed Waves):https://youtu.be/_1bVJSglte8
 ## Accessed on: 24.09.2026
 
+@onready var sfxyay = $sfxyay
+
 var wave : int 
 var difficulty : float
 const DIFF_MULTIPLIER : float = 1.2
@@ -21,6 +23,7 @@ var lives : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	sfxyay.process_mode = Node.PROCESS_MODE_ALWAYS
 	new_game()
 	$"Game Over/Button".pressed.connect(new_game)
 
@@ -51,6 +54,7 @@ func reset():
 func _process(_delta):
 	if is_wave_completed():
 		wave += 1
+		sfxyay.play()
 		# adjust difficult
 		difficulty *= DIFF_MULTIPLIER
 		if $EnemySpawner/Timer.wait_time > 0.25:

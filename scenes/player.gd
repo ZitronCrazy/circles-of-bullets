@@ -17,6 +17,7 @@ extends CharacterBody2D
 signal shoot
 
 @onready var sfxwalk = $sfxwalk
+@onready var sfxshoot = $sfxshoot
 
 const START_SPEED : int = 200
 const BOOST_SPEED : int = 400
@@ -53,13 +54,7 @@ func get_input():
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and can_shoot:
 		var dir = get_global_mouse_position() - position
 		shoot.emit(position, dir)
-		can_shoot = false
-		$ShotTimer.start()
-	
-	# mouse clicks
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and can_shoot:
-		var dir = get_global_mouse_position() - position
-		shoot.emit(position, dir)
+		sfxshoot.play()
 		can_shoot = false
 		$ShotTimer.start()
 

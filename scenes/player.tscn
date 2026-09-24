@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://cnuy04i5ifwg0" path="res://assets/player/NE/player_NE_0.png" id="23_fdfoy"]
 [ext_resource type="Texture2D" uid="uid://d3ijilrbe7hih" path="res://assets/player/NE/player_NE_1.png" id="24_hhpqf"]
 [ext_resource type="Texture2D" uid="uid://dtigkxm7ud7d5" path="res://assets/player/NE/player_NE_2.png" id="25_g5jhy"]
+[ext_resource type="AudioStream" uid="uid://c3s427q2w1346" path="res://assets/sfx/shot-gun.mp3" id="26_ujl30"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sg4lu"]
 animations = [{
@@ -199,6 +200,10 @@ one_shot = true
 [node name="sfxwalk" type="AudioStreamPlayer2D" parent="." unique_id=1844507620]
 stream = SubResource("AudioStreamMP3_ke2ow")
 volume_db = -1.0
+
+[node name="sfxshoot" type="AudioStreamPlayer2D" parent="." unique_id=630247706]
+stream = ExtResource("26_ujl30")
+volume_db = -15.0
 
 [connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]
 [connection signal="timeout" from="boostTimer" to="." method="_on_boost_timer_timeout"]
