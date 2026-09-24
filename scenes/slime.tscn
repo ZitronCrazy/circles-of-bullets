@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c7p8wj31jl607" path="res://scenes/slime.gd" id="1_n6pvg"]
 [ext_resource type="Texture2D" uid="uid://dnq24423nqvmv" path="res://assets/enemies/slime/slime_death0.png" id="1_p2gj0"]
 [ext_resource type="Texture2D" uid="uid://bfb35cv12i7gn" path="res://assets/enemies/slime/slime0.png" id="2_n6pvg"]
+[ext_resource type="AudioStream" uid="uid://b7660dduxliv5" path="res://assets/sfx/splat_oX5Rton.mp3" id="4_pjw23"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sg4lu"]
 animations = [{
@@ -53,6 +54,11 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=195617141]
 position = Vector2(1, 4.5)
 shape = SubResource("RectangleShape2D_bbnym")
+
+[node name="sfxdeath" type="AudioStreamPlayer2D" parent="." unique_id=977989103]
+stream = ExtResource("4_pjw23")
+volume_db = -9.72
+pitch_scale = 1.26
 
 [connection signal="timeout" from="EntranceTimer" to="." method="_on_entrance_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

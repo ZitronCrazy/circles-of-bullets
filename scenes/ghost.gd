@@ -5,7 +5,7 @@ extends CharacterBody2D
 ## Accessed on: 22.09.2026
 ## Godot Doc: https://docs.godotengine.org/en/4.5/getting_started/first_3d_game/05.spawning_mobs.html
 ## Accessed on: 22.09.2026
-
+@onready var sfxdeath = $sfxdeath
 @onready var main = get_node("/root/Main")
 @onready var player = get_node("/root/Main/Player")
 
@@ -16,7 +16,7 @@ signal hit_player
 
 var alive : bool
 var entered : bool
-var speed : int = 100
+var speed : float = 100.0
 var direction : Vector2
 const DROP_CHANCE : float = 0.1
 
@@ -49,16 +49,19 @@ func _physics_process(_delta):
 	else:
 		pass
 
+
+
 func die():
 	alive = false
 	$AnimatedSprite2D.animation = "dead"
 	$Area2D/CollisionShape2D.set_deferred("disabled", true)
+	sfxdeath.play()
 	if randf() <= DROP_CHANCE:
 		drop_item()
 	var explosion = explosion_scene.instantiate()
 	explosion.position=position
 	main.add_child(explosion)
-	explosion.process_mode = Node.PROCESS_MODE_ALWAYS #continoues explosion even if game over
+	explosion.process_mode = Node.PROCESS_MODE_ALWAYS
 	
 func drop_item():
 	var item = item_scene.instantiate()
