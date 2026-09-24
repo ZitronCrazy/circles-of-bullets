@@ -18,3 +18,5 @@ texture = SubResource("CompressedTexture2D_4gq7n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1392577926]
 shape = SubResource("RectangleShape2D_d8cc8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

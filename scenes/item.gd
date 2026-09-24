@@ -13,6 +13,16 @@ func _ready() -> void:
 	pass # Replace with function body.
 	$Sprite2D.texture = textures[item_type]
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+func _on_body_entered(body: Node2D) -> void:
+	#coffee
+	if item_type == 0:
+		print("coffee")
+	#health
+	elif item_type == 1:
+		print("Lives")
+	#gun
+	elif item_type == 2:
+		print("Gun")
+	#delete item
+	queue_free()
