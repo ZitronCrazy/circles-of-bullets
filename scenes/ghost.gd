@@ -5,6 +5,7 @@ extends CharacterBody2D
 ## Accessed on: 22.09.2026
 ## Godot Doc: https://docs.godotengine.org/en/4.5/getting_started/first_3d_game/05.spawning_mobs.html
 ## Accessed on: 22.09.2026
+
 @onready var sfxdeath = $sfxdeath
 @onready var main = get_node("/root/Main")
 @onready var player = get_node("/root/Main/Player")
@@ -49,8 +50,6 @@ func _physics_process(_delta):
 	else:
 		pass
 
-
-
 func die():
 	alive = false
 	$AnimatedSprite2D.animation = "dead"
@@ -62,7 +61,8 @@ func die():
 	explosion.position=position
 	main.add_child(explosion)
 	explosion.process_mode = Node.PROCESS_MODE_ALWAYS
-	
+	main._on_enemy_killed()
+
 func drop_item():
 	var item = item_scene.instantiate()
 	item.position = position
@@ -72,7 +72,6 @@ func drop_item():
 
 func _on_entrance_timer_timeout() -> void:
 	entered = true
-
 
 func _on_area_2d_body_entered(_body):
 	hit_player.emit()

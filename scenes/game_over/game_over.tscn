@@ -63,15 +63,33 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -11.5
-offset_right = 76.0
-offset_bottom = 11.5
+offset_left = -95.0
+offset_top = -29.0
+offset_right = 95.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
 theme_override_font_sizes/font_size = 20
 text = "WAVES SURVIVED: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BodycountLabel" type="Label" parent="." unique_id=1937154539]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = 1.0
+offset_right = 95.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
+theme_override_font_sizes/font_size = 20
+text = "BODYCOUNT: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 

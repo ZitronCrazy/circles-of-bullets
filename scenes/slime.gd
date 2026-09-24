@@ -61,7 +61,8 @@ func die():
 	explosion.position=position
 	main.add_child(explosion)
 	explosion.process_mode = Node.PROCESS_MODE_ALWAYS
-	
+	main._on_enemy_killed()
+
 func drop_item():
 	var item = item_scene.instantiate()
 	item.position = position
@@ -71,7 +72,6 @@ func drop_item():
 
 func _on_entrance_timer_timeout() -> void:
 	entered = true
-
 
 func _on_area_2d_body_entered(_body):
 	hit_player.emit()
