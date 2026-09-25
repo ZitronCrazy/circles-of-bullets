@@ -9,6 +9,7 @@ extends Node
 ##
 ## Tutorial(Top Down Survival Shooter In Godot | Part 9 - Completed Waves):https://youtu.be/_1bVJSglte8
 ## Accessed on: 24.09.2026
+
 @onready var music = $"background music"
 @onready var sfxgameover = $sfxgameover
 @onready var sfxyay = $sfxyay
@@ -67,15 +68,15 @@ func _process(_delta):
 		# adjust difficult
 		difficulty *= DIFF_MULTIPLIER
 		if $EnemySpawner/Timer.wait_time > 0.25:
-			$EnemySpawner/Timer.wait_time -= 0.05
+			$EnemySpawner/Timer.wait_time -= 0.05#; mein Semikolon 
 		if skeleton_speed < 500.0:
-			skeleton_speed += 0.1
+			skeleton_speed += 1.0
 		if slime_speed < 700.0:
-			slime_speed += 0.1
+			slime_speed += 1.0
 		if ghost_speed < 1000.0:
-			ghost_speed += 0.1
+			ghost_speed += 1.0
 		get_tree().paused = true
-		$WaveOVerTimer.start()
+		$WaveOverTimer.start()
 
 #spawns confetti after wave is completed
 func spawn_konfetti():
@@ -103,7 +104,7 @@ func _on_enemy_spawner_hit_p():
 		$"Game Over/BodycountLabel".text = "BODYCOUNT: " + str(bodycount)
 		$"Game Over".show()
 	else:
-		$WaveOVerTimer.start()
+		$WaveOverTimer.start()
 
 func _on_wave_o_ver_timer_timeout():
 	reset()
