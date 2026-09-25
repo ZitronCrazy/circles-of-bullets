@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://d4mn15djvwqh0" path="res://scenes/item.gd" id="1_s8enn"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4gq7n"]
-load_path = "res://.godot/imported/Heart_box.png-baa878688da820b7d9b104f883ff65ef.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d8cc8"]
 size = Vector2(32, 32)

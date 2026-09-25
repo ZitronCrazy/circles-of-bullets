@@ -3,12 +3,12 @@ extends Area2D
 @onready var main = get_node("/root/Main")
 @onready var lives_label = get_node("/root/Main/hud/liveslabel")
 
-var item_type : int # 0: coffe, 1: health, 2: gun
+var item_type : int # 0: monster energy, 1: health, 2: gun
 
-var coffe_box = preload("res://assets/items/coffee_box.png")
+var monster_box = preload("res://assets/items/monster_box.png")
 var heart_box = preload("res://assets/items/heart_box.png")
 var gun_box = preload("res://assets/items/gun_box.png")
-var textures = [coffe_box, heart_box, gun_box]
+var textures = [monster_box, heart_box, gun_box]
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,14 +18,14 @@ func _ready() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	#coffee
+	# monster energy
 	if item_type == 0:
 		body.boost()
-	#health
+	# health
 	elif item_type == 1:
 		main.lives +=1
 		lives_label.text = "X " +str(main.lives)
-	#gun
+	# gun
 	elif item_type == 2:
 		body.quick_fire()
 	#delete item
