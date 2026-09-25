@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://d1mcwq3bk86s2"]
 
+[ext_resource type="Texture2D" uid="uid://iers1767y04a" path="res://assets/main menu/Main Menu.png" id="1_l6cm7"]
+
 [node name="mainMenu" type="Node2D" unique_id=1509681289]
+
+[node name="MainMenu" type="Sprite2D" parent="." unique_id=404554143]
+position = Vector2(384, 416)
+texture = ExtResource("1_l6cm7")
 
 [node name="Button_manager" type="Control" parent="." unique_id=1331523429]
 layout_mode = 3
@@ -10,18 +16,18 @@ offset_bottom = 40.0
 
 [node name="Start" type="Button" parent="Button_manager" unique_id=590762648]
 layout_mode = 0
-offset_left = 77.0
-offset_top = 53.0
-offset_right = 85.0
-offset_bottom = 61.0
+offset_left = 51.0
+offset_top = 252.0
+offset_right = 386.0
+offset_bottom = 330.0
 text = "Start"
 
 [node name="Controls" type="Button" parent="Button_manager" unique_id=1986234295]
 layout_mode = 0
-offset_left = 159.0
-offset_top = 43.0
-offset_right = 233.0
-offset_bottom = 74.0
+offset_left = 49.0
+offset_top = 394.0
+offset_right = 384.0
+offset_bottom = 472.0
 text = "Controls"
 
 [node name="Quit" type="Button" parent="Button_manager" unique_id=1858312933]
@@ -31,8 +37,8 @@ anchor_left = 3.2270002
 anchor_top = 1.1780001
 anchor_right = 3.2270002
 anchor_bottom = 1.1780001
-offset_left = 16.919983
-offset_top = 100.88
-offset_right = 58.919983
-offset_bottom = 131.88
+offset_left = -81.08002
+offset_top = 483.88
+offset_right = 253.91998
+offset_bottom = 561.88
 text = "Quit"
