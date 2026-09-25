@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://j6ihvpg2gmyw"]
 
-[ext_resource type="Texture2D" uid="uid://hq8w2nfbn7q2" path="res://assets/hud/Heart.png" id="1_ahhtf"]
-[ext_resource type="Texture2D" uid="uid://bfb35cv12i7gn" path="res://assets/enemies/slime/slime0.png" id="2_oo0fn"]
+[ext_resource type="Texture2D" uid="uid://hq8w2nfbn7q2" path="res://assets/hud/heart_icon.png" id="1_ahhtf"]
+[ext_resource type="Texture2D" uid="uid://d11w6h47x4bau" path="res://assets/hud/monster_icon.png" id="2_oo0fn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_toqtt"]
 border_width_top = 2
@@ -18,9 +18,9 @@ offset_right = 768.0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_toqtt")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=214554719]
+[node name="heart_icon" type="Sprite2D" parent="." unique_id=214554719]
 position = Vector2(39, 800)
-scale = Vector2(2.5, 2.5)
+scale = Vector2(1.7, 1.7)
 texture = ExtResource("1_ahhtf")
 
 [node name="liveslabel" type="Label" parent="." unique_id=1109112992]
@@ -54,9 +54,9 @@ text = "WAVE: 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="enemy" type="Sprite2D" parent="." unique_id=936653954]
-position = Vector2(659, 790)
-scale = Vector2(2.5, 2.5)
+[node name="enemy_icon" type="Sprite2D" parent="." unique_id=936653954]
+position = Vector2(669, 800)
+scale = Vector2(1.7, 1.7)
 texture = ExtResource("2_oo0fn")
 
 [node name="enemieslabel" type="Label" parent="." unique_id=397058099]
