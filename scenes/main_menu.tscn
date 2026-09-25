@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://crugdcyhnmunw" path="res://scenes/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://iers1767y04a" path="res://assets/main menu/Main Menu.png" id="1_l6cm7"]
+[ext_resource type="AudioStream" uid="uid://d0wt6d8qsky8h" path="res://assets/sfx/mondamusic-8-bit-retro-589114.mp3" id="3_bqqt6"]
 
 [node name="mainMenu" type="Node2D" unique_id=1509681289]
 script = ExtResource("1_ekxnf")
@@ -44,6 +45,11 @@ offset_top = 483.88
 offset_right = 253.91998
 offset_bottom = 561.88
 text = "Quit"
+
+[node name="menu music" type="AudioStreamPlayer" parent="." unique_id=1075044484]
+stream = ExtResource("3_bqqt6")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Controls" to="." method="_on_controls_pressed"]

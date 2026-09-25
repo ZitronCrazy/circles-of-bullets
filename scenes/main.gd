@@ -9,7 +9,7 @@ extends Node
 ##
 ## Tutorial(Top Down Survival Shooter In Godot | Part 9 - Completed Waves):https://youtu.be/_1bVJSglte8
 ## Accessed on: 24.09.2026
-
+@onready var music = $"background music"
 @onready var sfxgameover = $sfxgameover
 @onready var sfxyay = $sfxyay
 
@@ -29,6 +29,7 @@ var lives : int
 func _ready() -> void:
 	sfxyay.process_mode = Node.PROCESS_MODE_ALWAYS
 	sfxgameover.process_mode = Node.PROCESS_MODE_ALWAYS
+	music.process_mode = Node.PROCESS_MODE_ALWAYS
 	new_game()
 	$"Game Over/Button".pressed.connect(new_game)
 
