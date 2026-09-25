@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://d1mcwq3bk86s2"]
 
+[ext_resource type="Script" uid="uid://crugdcyhnmunw" path="res://scenes/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://iers1767y04a" path="res://assets/main menu/Main Menu.png" id="1_l6cm7"]
 
 [node name="mainMenu" type="Node2D" unique_id=1509681289]
+script = ExtResource("1_ekxnf")
 
 [node name="MainMenu" type="Sprite2D" parent="." unique_id=404554143]
 position = Vector2(384, 416)
@@ -42,3 +44,7 @@ offset_top = 483.88
 offset_right = 253.91998
 offset_bottom = 561.88
 text = "Quit"
+
+[connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
