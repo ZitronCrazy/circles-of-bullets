@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dndt6pj17hq70"]
+
+[ext_resource type="Script" uid="uid://d4mn15djvwqh0" path="res://scenes/game/entity/items/item.gd" id="1_s8enn"]
+
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4gq7n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8cc8"]
+size = Vector2(32, 32)
+
+[node name="item" type="Area2D" unique_id=1242918876]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_s8enn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=214964906]
+texture = SubResource("CompressedTexture2D_4gq7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1392577926]
+shape = SubResource("RectangleShape2D_d8cc8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

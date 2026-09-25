@@ -1,12 +1,11 @@
 extends Node
+## Lilia and Tabea
 ## Game Manager Logic
 ##
 ## Tutorial(Top Down Survival Shooter In Godot | Part 4 - Enemy AI): https://youtu.be/7Jc5fKNTb_A
 ## Accessed on: 22.09.2026
-## 
 ## Tutorial(Top Down Survival Shooter In Godot | Part 8 - Game Over): https://youtu.be/_-e7t5Fby_0
 ## Accessed on: 23.09.2026
-##
 ## Tutorial(Top Down Survival Shooter In Godot | Part 9 - Completed Waves):https://youtu.be/_1bVJSglte8
 ## Accessed on: 24.09.2026
 
@@ -14,7 +13,7 @@ extends Node
 @onready var sfxgameover = $sfxgameover
 @onready var sfxyay = $sfxyay
 
-var konfetti_scene := preload("res://scenes/konfetti.tscn")
+var konfetti_scene := preload("res://scenes/game/levels/animations/konfetti.tscn")
 var wave : int 
 var difficulty : float
 const DIFF_MULTIPLIER : float = 1.2
@@ -42,7 +41,7 @@ func new_game():
 	slime_speed = 70.0
 	ghost_speed = 100.0
 	$EnemySpawner/Timer.wait_time = 1.0
-	$"Game Over/BodycountLabel".text = "BODYCOUNT: 0"
+	$"Game Over/BodyCountLabel".text = "BODY COUNT :  0"
 	reset()
 	get_tree().call_group("items", "queue_free")
 
@@ -52,9 +51,9 @@ func reset():
 	$Player.reset_control()
 	get_tree().call_group("enemies", "queue_free")
 	get_tree().call_group("bullets", "queue_free")
-	$hud/liveslabel.text = "X" + str(lives)
-	$hud/wavelabel.text = "WAVE: " + str(wave)
-	$hud/enemieslabel.text = "X" + str(remaining_enemies)
+	$hud/liveslabel.text = "X " + str(lives)
+	$hud/wavelabel.text = "WAVE :  " + str(wave)
+	$hud/enemieslabel.text = "X " + str(remaining_enemies)
 	$"Game Over".hide()
 	get_tree().paused = true
 	$RestartTimer.start()
@@ -91,17 +90,17 @@ func _on_enemy_killed():
 	bodycount += 1
 	remaining_enemies -= 1
 	
-	$hud/enemieslabel.text = "X" + str(remaining_enemies)
+	$hud/enemieslabel.text = "X " + str(remaining_enemies)
 
 func _on_enemy_spawner_hit_p():
 	print("hit player")
 	lives -= 1 
-	$hud/liveslabel.text = "X" + str(lives)
+	$hud/liveslabel.text = "X " + str(lives)
 	get_tree().paused = true
 	if lives <= 0:
 		sfxgameover.play()
-		$"Game Over/WavesSurvivedLabel".text = "WAVES SURVIVED: " + str(wave -1)
-		$"Game Over/BodycountLabel".text = "BODYCOUNT: " + str(bodycount)
+		$"Game Over/WavesSurvivedLabel".text = "WAVES SURVIVED :  " + str(wave -1)
+		$"Game Over/BodyCountLabel".text = "BODY COUNT :  " + str(bodycount)
 		$"Game Over".show()
 	else:
 		$WaveOverTimer.start()

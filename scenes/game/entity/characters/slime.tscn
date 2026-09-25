@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dlddpvq8ajtrq"]
+
+[ext_resource type="Script" uid="uid://c7p8wj31jl607" path="res://scenes/game/entity/characters/slime.gd" id="1_hqgtr"]
+[ext_resource type="Texture2D" uid="uid://dnq24423nqvmv" path="res://assets/sprites/enemies/slime/slime_death0.png" id="2_2xqmx"]
+[ext_resource type="Texture2D" uid="uid://bfb35cv12i7gn" path="res://assets/sprites/enemies/slime/slime0.png" id="3_54euo"]
+[ext_resource type="AudioStream" uid="uid://b7660dduxliv5" path="res://assets/audio/sfx/splat_oX5Rton.mp3" id="4_or7q4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sg4lu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2xqmx")
+}],
+"loop": 1,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_54euo")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4djk1"]
+size = Vector2(20, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbnym"]
+size = Vector2(20, 17)
+
+[node name="slime" type="CharacterBody2D" unique_id=1831252331]
+scale = Vector2(1.5, 1.5)
+collision_layer = 4
+script = ExtResource("1_hqgtr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1328629355]
+sprite_frames = SubResource("SpriteFrames_sg4lu")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=448099660]
+position = Vector2(1, 4.5)
+shape = SubResource("RectangleShape2D_4djk1")
+
+[node name="EntranceTimer" type="Timer" parent="." unique_id=1369310891]
+wait_time = 1.25
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1140295893]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=195617141]
+position = Vector2(1, 4.5)
+shape = SubResource("RectangleShape2D_bbnym")
+
+[node name="sfxdeath" type="AudioStreamPlayer2D" parent="." unique_id=977989103]
+stream = ExtResource("4_or7q4")
+volume_db = -9.72
+pitch_scale = 1.26
+
+[connection signal="timeout" from="EntranceTimer" to="." method="_on_entrance_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
