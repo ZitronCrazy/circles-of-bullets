@@ -76,6 +76,7 @@ func _process(_delta):
 		get_tree().paused = true
 		$WaveOVerTimer.start()
 
+#spawns confetti after wave is completed
 func spawn_konfetti():
 	var konfetti = konfetti_scene.instantiate()
 	konfetti.position = $Player.position
