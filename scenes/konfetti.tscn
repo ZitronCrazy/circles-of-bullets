@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbi2dodianx2o"]
 
-[ext_resource type="Texture2D" path="res://assets/particles/konfetti.png" id="1_l8vkw"]
+[ext_resource type="Texture2D" uid="uid://dyjxpquqty3b0" path="res://assets/particles/konfetti.png" id="1_l8vkw"]
 [ext_resource type="Script" uid="uid://dx2ahxdw8sk5s" path="res://scenes/explosion.gd" id="2_7cqr3"]
 
 [sub_resource type="Curve" id="Curve_7rj46"]

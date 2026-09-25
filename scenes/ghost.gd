@@ -54,6 +54,7 @@ func die():
 	alive = false
 	$AnimatedSprite2D.animation = "dead"
 	$Area2D/CollisionShape2D.set_deferred("disabled", true)
+	sfxdeath.pitch_scale = randf_range(0.85, 1.15)
 	sfxdeath.play()
 	if randf() <= DROP_CHANCE:
 		drop_item()

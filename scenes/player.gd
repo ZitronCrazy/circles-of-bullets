@@ -46,6 +46,7 @@ func get_input():
 	# walk sfx
 	if velocity.length() > 0:
 		if not sfxwalk.playing:
+			sfxwalk.pitch_scale = randf_range(0.95, 1.05)
 			sfxwalk.play()
 	else:
 		sfxwalk.stop()
@@ -54,6 +55,7 @@ func get_input():
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and can_shoot:
 		var dir = get_global_mouse_position() - position
 		shoot.emit(position, dir)
+		sfxshoot.pitch_scale = randf_range(0.9, 1.1)
 		sfxshoot.play()
 		can_shoot = false
 		$ShotTimer.start()
