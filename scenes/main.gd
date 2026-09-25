@@ -13,6 +13,7 @@ extends Node
 @onready var sfxgameover = $sfxgameover
 @onready var sfxyay = $sfxyay
 
+var konfetti_scene := preload("res://scenes/konfetti.tscn")
 var wave : int 
 var difficulty : float
 const DIFF_MULTIPLIER : float = 1.2
@@ -61,6 +62,7 @@ func _process(_delta):
 	if is_wave_completed():
 		wave += 1
 		sfxyay.play()
+		spawn_konfetti()
 		# adjust difficult
 		difficulty *= DIFF_MULTIPLIER
 		if $EnemySpawner/Timer.wait_time > 0.25:
@@ -73,6 +75,14 @@ func _process(_delta):
 			ghost_speed += 0.1
 		get_tree().paused = true
 		$WaveOVerTimer.start()
+
+func spawn_konfetti():
+	var konfetti = konfetti_scene.instantiate()
+	konfetti.position = $Player.position
+	add_child(konfetti)
+	# runs even if paused
+	konfetti.process_mode = Node.PROCESS_MODE_ALWAYS
+	konfetti.emitting = true
 
 func _on_enemy_killed():
 	bodycount += 1
