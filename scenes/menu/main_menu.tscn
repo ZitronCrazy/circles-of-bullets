@@ -3,6 +3,48 @@
 [ext_resource type="Script" uid="uid://crugdcyhnmunw" path="res://scenes/menu/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://iers1767y04a" path="res://assets/sprites/main menu/Main Menu.png" id="1_l6cm7"]
 [ext_resource type="AudioStream" uid="uid://d0wt6d8qsky8h" path="res://assets/audio/music/mondamusic-8-bit-retro-589114.mp3" id="3_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://di4nnvp8p752n" path="res://assets/sprites/hud/a_key/a_key.png" id="3_hj162"]
+[ext_resource type="Texture2D" uid="uid://cm1hva1xqcwv1" path="res://assets/sprites/hud/a_key/a_key_down.png" id="4_xn6kt"]
+[ext_resource type="Texture2D" uid="uid://dybm470yaiimo" path="res://assets/sprites/hud/mouse/mouse.png" id="7_27h4x"]
+[ext_resource type="Texture2D" uid="uid://b84vii4g3suuw" path="res://assets/sprites/hud/mouse/mouse_left_click_down.png" id="8_gdhp0"]
+[ext_resource type="Texture2D" uid="uid://c2t1x6alysmbt" path="res://assets/sprites/hud/s_key/s_key.png" id="9_pstia"]
+[ext_resource type="Texture2D" uid="uid://cdksmhyk04bhy" path="res://assets/sprites/hud/s_key/s_key_down.png" id="10_41tvm"]
+[ext_resource type="Texture2D" uid="uid://ciwqmsibvf3i6" path="res://assets/sprites/hud/kill_enemy/kill_enemy0.png" id="11_42qp1"]
+[ext_resource type="Texture2D" uid="uid://bsjbiijxoiqlb" path="res://assets/sprites/hud/w_key/w_key.png" id="11_vxdmp"]
+[ext_resource type="Texture2D" uid="uid://b4funbd5ctf15" path="res://assets/sprites/hud/w_key/w_key_down.png" id="12_3h20m"]
+[ext_resource type="Texture2D" uid="uid://nobudwsfw5si" path="res://assets/sprites/hud/kill_enemy/kill_enemy1.png" id="12_12yd3"]
+[ext_resource type="Texture2D" uid="uid://6yuvd5t1oeop" path="res://assets/sprites/player/E/player_E_1.png" id="12_27h4x"]
+[ext_resource type="Texture2D" uid="uid://coeve18w4idee" path="res://assets/sprites/hud/kill_enemy/kill_enemy2.png" id="13_26v5e"]
+[ext_resource type="Texture2D" uid="uid://s1uk3h1iueam" path="res://assets/sprites/hud/crosshair.png" id="13_prbor"]
+[ext_resource type="Texture2D" uid="uid://c2fxdpwnjhr3k" path="res://assets/sprites/hud/kill_enemy/kill_enemy3.png" id="14_rp6ip"]
+[ext_resource type="Texture2D" uid="uid://c00scj6e3glbi" path="res://assets/sprites/hud/kill_enemy/kill_enemy4.png" id="15_dckix"]
+[ext_resource type="Texture2D" uid="uid://cyuxtvumval17" path="res://assets/sprites/hud/a_key/arrow_left.png" id="16_si58d"]
+[ext_resource type="Texture2D" uid="uid://kdtrpaeqkbry" path="res://assets/sprites/player/W/player_W_0.png" id="17_anexq"]
+[ext_resource type="Texture2D" uid="uid://mrjksx2m4rdj" path="res://assets/sprites/player/S/player_S_0.png" id="18_co4ci"]
+[ext_resource type="Texture2D" uid="uid://d1vjlw2ojfrw8" path="res://assets/sprites/player/W/player_W_1.png" id="18_qvxhw"]
+[ext_resource type="Texture2D" uid="uid://c61jhn31xgt6n" path="res://assets/sprites/player/S/player_S_1.png" id="19_d66xx"]
+[ext_resource type="Texture2D" uid="uid://dmn4kpcux04fk" path="res://assets/sprites/player/W/player_W_2.png" id="19_do53f"]
+[ext_resource type="Texture2D" uid="uid://dl80mibfvx2t8" path="res://assets/sprites/player/S/player_S_2.png" id="20_cmcyx"]
+[ext_resource type="Texture2D" uid="uid://bbn2811ejy443" path="res://assets/sprites/player/E/player_E_0.png" id="24_7iyuo"]
+[ext_resource type="Texture2D" uid="uid://cl2qov7dqqqgr" path="res://assets/sprites/player/E/player_E_2.png" id="26_406qy"]
+[ext_resource type="Texture2D" uid="uid://dm0i1ggfoqe5i" path="res://assets/sprites/player/N/player_N_0.png" id="27_83b5w"]
+[ext_resource type="Texture2D" uid="uid://cyuriih3cf6wl" path="res://assets/sprites/player/N/player_N_1.png" id="28_gy47a"]
+[ext_resource type="Texture2D" uid="uid://d3pr1722encvl" path="res://assets/sprites/player/N/player_N_2.png" id="29_idlmi"]
+[ext_resource type="Texture2D" uid="uid://bx5vdy0vyjs8x" path="res://assets/sprites/hud/s_key/down_arrow.png" id="30_parxl"]
+[ext_resource type="Texture2D" uid="uid://cyxcygy3cg8br" path="res://assets/sprites/hud/w_key/up_key.png" id="31_lsxs6"]
+[ext_resource type="Texture2D" uid="uid://b1ssb8hknt8up" path="res://assets/sprites/hud/d_key/right_arrow.png" id="32_unoev"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_247la"]
+bg_color = Color(0.09411765, 0.1882353, 0.1882353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6ea1"]
 bg_color = Color(0.32156864, 0.49803922, 0.22352941, 1)
@@ -112,25 +154,251 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jokgn"]
+bg_color = Color(0.09411765, 0.1882353, 0.1882353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gdhp0"]
+load_path = "res://.godot/imported/d_key.png-6046b4a4327c72af36b187348d473d26.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pstia"]
+load_path = "res://.godot/imported/d_key_down.png-3691af130dd06d1d03c5fcb278df04fe.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jokgn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hj162")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xn6kt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hj162")
+}],
+"loop": 1,
+"name": &"a_key_change",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_gdhp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_pstia")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_gdhp0")
+}],
+"loop": 1,
+"name": &"d_key_change",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_27h4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gdhp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_27h4x")
+}],
+"loop": 1,
+"name": &"mouse_button",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_pstia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_41tvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pstia")
+}],
+"loop": 1,
+"name": &"s_key_change",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_vxdmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3h20m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vxdmp")
+}],
+"loop": 1,
+"name": &"w_key_change",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ook4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_42qp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_12yd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_26v5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rp6ip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dckix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_42qp1")
+}],
+"loop": 1,
+"name": &"skeleton_killed",
+"speed": 9.5
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rqoj4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_co4ci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_d66xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_cmcyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_d66xx")
+}],
+"loop": 1,
+"name": &"down_player",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_anexq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qvxhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_do53f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qvxhw")
+}],
+"loop": 1,
+"name": &"left_player",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_7iyuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_27h4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_406qy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_27h4x")
+}],
+"loop": 1,
+"name": &"right_player",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_83b5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_gy47a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_idlmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_gy47a")
+}],
+"loop": 1,
+"name": &"up_player",
+"speed": 5.0
+}]
+
 [node name="mainMenu" type="Node2D" unique_id=1509681289]
 script = ExtResource("1_ekxnf")
 
-[node name="MainMenu" type="Sprite2D" parent="." unique_id=404554143]
+[node name="hud_menu" type="CanvasLayer" parent="." unique_id=397605018]
+
+[node name="MainMenu" type="Sprite2D" parent="hud_menu" unique_id=404554143]
 position = Vector2(384, 416)
 texture = ExtResource("1_l6cm7")
 
-[node name="Button_manager" type="Control" parent="." unique_id=1331523429]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="mainPanel_background" type="Panel" parent="hud_menu" unique_id=1564720134]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -236.0
+offset_right = 440.0
+offset_bottom = 164.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_247la")
 
-[node name="Start" type="Button" parent="Button_manager" unique_id=590762648]
+[node name="GameTitle" type="Label" parent="hud_menu/mainPanel_background" unique_id=1777327145]
 layout_mode = 0
-offset_left = 51.0
-offset_top = 252.0
-offset_right = 386.0
-offset_bottom = 330.0
+offset_left = 33.97
+offset_top = -69.0
+offset_right = 395.97
+offset_bottom = -1.9999084
+theme_override_colors/font_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 24
+theme_override_constants/shadow_outline_size = 32
+theme_override_font_sizes/font_size = 48
+text = "Cicles of Bullets"
+
+[node name="mainButton_manager" type="Control" parent="hud_menu/mainPanel_background" unique_id=1331523429]
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 399.0
+offset_bottom = 422.0
+
+[node name="Start" type="Button" parent="hud_menu/mainPanel_background/mainButton_manager" unique_id=590762648]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -170.0
+offset_right = -32.0
+offset_bottom = -92.00003
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
 theme_override_colors/font_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
 theme_override_colors/font_pressed_color = Color(0.52156866, 0.41568628, 0, 1)
 theme_override_colors/font_hover_color = Color(0.9882353, 0.92941177, 0.75686276, 1)
@@ -142,12 +410,19 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_aa1tn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 text = "Start"
 
-[node name="Controls" type="Button" parent="Button_manager" unique_id=1986234295]
-layout_mode = 0
-offset_left = 49.0
-offset_top = 394.0
-offset_right = 384.0
-offset_bottom = 472.0
+[node name="Controls" type="Button" parent="hud_menu/mainPanel_background/mainButton_manager" unique_id=1986234295]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -50.0
+offset_right = -32.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
 theme_override_colors/font_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
 theme_override_colors/font_pressed_color = Color(0.52156866, 0.41568628, 0, 1)
 theme_override_colors/font_hover_color = Color(0.9882353, 0.92941177, 0.75686276, 1)
@@ -159,17 +434,19 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_y5hnm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_e3tl7")
 text = "Controls"
 
-[node name="Quit" type="Button" parent="Button_manager" unique_id=1858312933]
+[node name="Quit" type="Button" parent="hud_menu/mainPanel_background/mainButton_manager" unique_id=1858312933]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 3.2270002
-anchor_top = 1.1780001
-anchor_right = 3.2270002
-anchor_bottom = 1.1780001
-offset_left = -81.08002
-offset_top = 483.88
-offset_right = 253.91998
-offset_bottom = 561.88
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = 70.0
+offset_right = -32.0
+offset_bottom = 147.99997
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
 theme_override_colors/font_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
 theme_override_colors/font_pressed_color = Color(0.52156866, 0.41568628, 0, 1)
 theme_override_colors/font_hover_color = Color(0.9882353, 0.92941177, 0.75686276, 1)
@@ -181,11 +458,168 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_toqj1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bvhqg")
 text = "Quit"
 
+[node name="controlsPanel_background" type="Panel" parent="hud_menu" unique_id=1385919997]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -344.0
+offset_top = -236.0
+offset_right = 339.15002
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jokgn")
+
+[node name="ControlsTitle" type="Label" parent="hud_menu/controlsPanel_background" unique_id=156628566]
+layout_mode = 0
+offset_left = 239.0
+offset_top = -69.0
+offset_right = 439.00018
+offset_bottom = -2.0
+theme_override_colors/font_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 24
+theme_override_constants/shadow_outline_size = 32
+theme_override_font_sizes/font_size = 48
+text = "Controls"
+
+[node name="controlButton_manager" type="Control" parent="hud_menu/controlsPanel_background" unique_id=1992318171]
+anchors_preset = 0
+offset_right = 683.0
+offset_bottom = 422.0
+
+[node name="Back" type="Button" parent="hud_menu/controlsPanel_background/controlButton_manager" unique_id=893500247]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -167.5
+offset_top = -122.0
+offset_right = 167.5
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.95686275, 0.76862746, 0.1882353, 1)
+theme_override_colors/font_pressed_color = Color(0.52156866, 0.41568628, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9882353, 0.92941177, 0.75686276, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_p6gnr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y5hnm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e3tl7")
+text = "Back"
+
+[node name="mouse_button" type="AnimatedSprite2D" parent="hud_menu/controlsPanel_background" unique_id=203600180]
+position = Vector2(360, 150)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_jokgn")
+animation = &"mouse_button"
+autoplay = "mouse_button"
+frame_progress = 0.10588719
+
+[node name="kill_enemy" type="AnimatedSprite2D" parent="hud_menu/controlsPanel_background" unique_id=2095375233]
+position = Vector2(490, 130)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_0ook4")
+animation = &"skeleton_killed"
+autoplay = "skeleton_killed"
+frame_progress = 0.03498687
+
+[node name="crosshair" type="Sprite2D" parent="hud_menu/controlsPanel_background" unique_id=960345601]
+position = Vector2(540, 146)
+scale = Vector2(3, 3)
+texture = ExtResource("13_prbor")
+
+[node name="a_key" type="AnimatedSprite2D" parent="hud_menu/controlsPanel_background" unique_id=508629646]
+position = Vector2(60, 40)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_jokgn")
+animation = &"a_key_change"
+autoplay = "a_key_change"
+
+[node name="left_arrow" type="Sprite2D" parent="hud_menu/controlsPanel_background" unique_id=421629748]
+position = Vector2(120, 40)
+scale = Vector2(3, 3)
+texture = ExtResource("16_si58d")
+
+[node name="player_left" type="AnimatedSprite2D" parent="hud_menu/controlsPanel_background" unique_id=654882248]
+position = Vector2(180, 40)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_rqoj4")
+animation = &"left_player"
+autoplay = "left_player"
+
+[node name="s_key" type="AnimatedSprite2D" parent="hud_menu/controlsPanel_background" unique_id=2044051755]
+position = Vector2(60, 160)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_jokgn")
+animation = &"s_key_change"
+autoplay = "s_key_change"
+
+[node name="down_arrow" type="Sprite2D" parent="hud_menu/controlsPanel_background" unique_id=1962932581]
+position = Vector2(120, 160)
+scale = Vector2(3, 3)
+texture = ExtResource("30_parxl")
+
+[node name="player_down" type="AnimatedSprite2D" parent="hud_menu/controlsPanel_background" unique_id=837080601]
+position = Vector2(180, 160)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_rqoj4")
+animation = &"down_player"
+autoplay = "down_player"
+
+[node name="w_key" type="AnimatedSprite2D" parent="hud_menu/controlsPanel_background" unique_id=1516708676]
+position = Vector2(60, 100)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_jokgn")
+animation = &"w_key_change"
+autoplay = "w_key_change"
+
+[node name="up_arrow" type="Sprite2D" parent="hud_menu/controlsPanel_background" unique_id=1911081487]
+position = Vector2(120, 100)
+scale = Vector2(3, 3)
+texture = ExtResource("31_lsxs6")
+
+[node name="player_up" type="AnimatedSprite2D" parent="hud_menu/controlsPanel_background" unique_id=1184051380]
+position = Vector2(180, 100)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_rqoj4")
+animation = &"up_player"
+autoplay = "up_player"
+
+[node name="d_key" type="AnimatedSprite2D" parent="hud_menu/controlsPanel_background" unique_id=269334277]
+position = Vector2(60, 220)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_jokgn")
+animation = &"d_key_change"
+autoplay = "d_key_change"
+
+[node name="right_arrow" type="Sprite2D" parent="hud_menu/controlsPanel_background" unique_id=1403657235]
+position = Vector2(120, 220)
+scale = Vector2(3, 3)
+texture = ExtResource("32_unoev")
+
+[node name="player_right" type="AnimatedSprite2D" parent="hud_menu/controlsPanel_background" unique_id=851379334]
+position = Vector2(180, 220)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_rqoj4")
+animation = &"right_player"
+autoplay = "right_player"
+
 [node name="menu music" type="AudioStreamPlayer" parent="." unique_id=1075044484]
 stream = ExtResource("3_bqqt6")
 volume_db = -10.0
 autoplay = true
 
-[connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Button_manager/Controls" to="." method="_on_controls_pressed"]
-[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="hud_menu/mainPanel_background/mainButton_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="hud_menu/mainPanel_background/mainButton_manager/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="hud_menu/mainPanel_background/mainButton_manager/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="hud_menu/controlsPanel_background/controlButton_manager/Back" to="." method="_on_back_pressed"]
