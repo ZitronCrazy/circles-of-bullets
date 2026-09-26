@@ -31,7 +31,11 @@ func _ready() -> void:
 	sfxgameover.process_mode = Node.PROCESS_MODE_ALWAYS
 	music.process_mode = Node.PROCESS_MODE_ALWAYS
 	new_game()
-	$"Game Over/Button".pressed.connect(new_game)
+	$"Game Over/Panel/Retry".pressed.connect(new_game)
+	$"Game Over/Panel/Quit".pressed.connect(quit)
+
+func quit():
+	get_tree().quit()
 
 func new_game():
 	lives = 3
